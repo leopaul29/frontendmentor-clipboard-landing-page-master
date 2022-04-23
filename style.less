@@ -1,4 +1,11 @@
 // variables
+@mobile-width: 375px;
+@desktop-width: 1440px;
+@primary: hsl(171, 66%, 44%);
+@secondary: hsl(233, 100%, 69%);
+@dark-gray: hsl(210, 10%, 33%);
+@gray: hsl(201, 11%, 66%);
+@white: hsl(0, 100%, 100%);
 
 // attribution
 .attribution {
@@ -10,4 +17,40 @@
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+
+// reset
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+// mixins
+.button {
+  color: @white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 0;
+}
+
+// components
+.btn-primary {
+  .button();
+  background-color: @primary;
+}
+
+.btn-secondary {
+  .button();
+  background-color: @secondary;
+}
+
+// container
+.container {
+  max-width: @desktop-width;
+  margin: auto;
+  font-size: 18px;
 }

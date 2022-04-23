@@ -8,3 +8,47 @@
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+@font-face {
+  font-family: 'Bai Jamjuree';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/baijamjuree/v11/LDI1apSCOBt_aeQQ7ftydoaMWQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bai Jamjuree';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/baijamjuree/v11/LDIqapSCOBt_aeQQ7ftydoa0gebukw.ttf) format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+.button {
+  color: hsl(0, 0%, 100%);
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 0;
+}
+.btn-primary {
+  color: hsl(0, 0%, 100%);
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 0;
+  background-color: hsl(171, 66%, 44%);
+}
+.btn-secondary {
+  color: hsl(0, 0%, 100%);
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 0;
+  background-color: hsl(233, 100%, 69%);
+}
+.container {
+  max-width: 1440px;
+  margin: auto;
+  font-size: 18px;
+}
