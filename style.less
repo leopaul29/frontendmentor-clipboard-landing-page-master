@@ -1,11 +1,16 @@
 // variables
-@mobile-width: 375px;
-@desktop-width: 1440px;
-@primary: hsl(171, 66%, 44%);
-@secondary: hsl(233, 100%, 69%);
-@dark-gray: hsl(210, 10%, 33%);
-@gray: hsl(201, 11%, 66%);
-@white: hsl(0, 100%, 100%);
+#dimension() {
+  mobile-width: 375px;
+  desktop-width: 1440px;
+}
+
+#colors() {
+  primary: hsl(171, 66%, 44%);
+  secondary: hsl(233, 100%, 69%);
+  dark-gray: hsl(210, 10%, 33%);
+  gray: hsl(201, 11%, 66%);
+  white: hsl(0, 100%, 100%);
+}
 
 // attribution
 .attribution {
@@ -30,27 +35,114 @@
 }
 
 // mixins
+.text-darkgray {
+  color: #colors[dark-gray];
+}
+.text-gray {
+  color: #colors[gray];
+}
+.white {
+  color: #colors[white];
+}
+.bgc-primary {
+  background-color: #colors[primary];
+}
+.bgc-secondary {
+  background-color: #colors[secondary];
+}
+.based-font {
+  font-family: "Bai Jamjuree";
+  font-weight: 400;
+}
 .button {
-  color: @white;
-  padding: 10px 20px;
-  border-radius: 20px;
+  .white();
+  .based-font();
+  padding: 15px 25px;
+  border-radius: 30px;
   border: 0;
+}
+.title {
+  .text-darkgray();
+  font-weight: 600;
 }
 
 // components
+.title-h1 {
+  .title();
+  font-size: 40px;
+}
+.title-h2 {
+  .title();
+  font-size: 24px;
+}
+.title-h3 {
+  .title();
+  font-size: 20px;
+}
 .btn-primary {
   .button();
-  background-color: @primary;
+  .bgc-primary();
+  font-weight: 600;
 }
-
 .btn-secondary {
   .button();
-  background-color: @secondary;
+  .bgc-secondary();
+  font-weight: 600;
 }
 
 // container
-.container {
-  max-width: @desktop-width;
+body {
+  max-width: #dimension[desktop-width];
   margin: auto;
   font-size: 18px;
+  .based-font();
+  .text-gray();
+}
+
+// header
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  background-image: url("images/bg-header-desktop.png");
+  background-repeat: no-repeat;
+  padding: 125px 0px;
+  .header__logo {
+    width: 100px;
+  }
+  .header__content {
+    text-align: center;
+    .header__title {
+      margin-bottom: 15px;
+    }
+  }
+  .header__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+
+// main
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+// section
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  .section__header {
+  }
+  .section__title {
+  }
+  .section__description {
+    text-align: center;
+  }
 }

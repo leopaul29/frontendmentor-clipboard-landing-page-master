@@ -27,28 +27,115 @@
   padding: 0;
   box-shadow: none;
 }
+.text-darkgray {
+  color: hsl(210, 10%, 33%);
+}
+.text-gray {
+  color: hsl(201, 11%, 66%);
+}
+.white {
+  color: hsl(0, 0%, 100%);
+}
+.bgc-primary {
+  background-color: hsl(171, 66%, 44%);
+}
+.bgc-secondary {
+  background-color: hsl(233, 100%, 69%);
+}
+.based-font {
+  font-family: "Bai Jamjuree";
+  font-weight: 400;
+}
 .button {
   color: hsl(0, 0%, 100%);
-  padding: 10px 20px;
-  border-radius: 20px;
+  font-family: "Bai Jamjuree";
+  font-weight: 400;
+  padding: 15px 25px;
+  border-radius: 30px;
   border: 0;
+}
+.title {
+  color: hsl(210, 10%, 33%);
+  font-weight: 600;
+}
+.title-h1 {
+  color: hsl(210, 10%, 33%);
+  font-weight: 600;
+  font-size: 40px;
+}
+.title-h2 {
+  color: hsl(210, 10%, 33%);
+  font-weight: 600;
+  font-size: 24px;
+}
+.title-h3 {
+  color: hsl(210, 10%, 33%);
+  font-weight: 600;
+  font-size: 20px;
 }
 .btn-primary {
   color: hsl(0, 0%, 100%);
-  padding: 10px 20px;
-  border-radius: 20px;
+  font-family: "Bai Jamjuree";
+  font-weight: 400;
+  padding: 15px 25px;
+  border-radius: 30px;
   border: 0;
   background-color: hsl(171, 66%, 44%);
+  font-weight: 600;
 }
 .btn-secondary {
   color: hsl(0, 0%, 100%);
-  padding: 10px 20px;
-  border-radius: 20px;
+  font-family: "Bai Jamjuree";
+  font-weight: 400;
+  padding: 15px 25px;
+  border-radius: 30px;
   border: 0;
   background-color: hsl(233, 100%, 69%);
+  font-weight: 600;
 }
-.container {
+body {
   max-width: 1440px;
   margin: auto;
   font-size: 18px;
+  font-family: "Bai Jamjuree";
+  font-weight: 400;
+  color: hsl(201, 11%, 66%);
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  background-image: url("images/bg-header-desktop.png");
+  background-repeat: no-repeat;
+  padding: 125px 0px;
+}
+.header .header__logo {
+  width: 100px;
+}
+.header .header__content {
+  text-align: center;
+}
+.header .header__content .header__title {
+  margin-bottom: 15px;
+}
+.header .header__buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+.section .section__description {
+  text-align: center;
 }
