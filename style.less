@@ -9,6 +9,7 @@
   secondary: hsl(233, 100%, 69%);
   dark-gray: hsl(210, 10%, 33%);
   gray: hsl(201, 11%, 66%);
+  light-gray: hsl(201, 11%, 90%);
   white: hsl(0, 100%, 100%);
 }
 
@@ -92,6 +93,11 @@
   .bgc-secondary();
   font-weight: 600;
 }
+.buttons-group {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
 
 // container
 body {
@@ -119,11 +125,6 @@ body {
     .header__title {
       margin-bottom: 15px;
     }
-  }
-  .header__buttons {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
   }
 }
 
@@ -208,5 +209,11 @@ body {
     img {
       height: max-content;
     }
+  }
+}
+
+#download {
+  .section__description {
+    max-width: 700px;
   }
 }

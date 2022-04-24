@@ -102,6 +102,11 @@
 .btn-secondary:hover {
   cursor: pointer;
 }
+.buttons-group {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
 body {
   max-width: 1440px;
   margin: auto;
@@ -127,11 +132,6 @@ body {
 }
 .header .header__content .header__title {
   margin-bottom: 15px;
-}
-.header .header__buttons {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
 }
 .main {
   display: flex;
@@ -201,4 +201,7 @@ body {
 }
 #workflow .companies img {
   height: max-content;
+}
+#download .section__description {
+  max-width: 700px;
 }
