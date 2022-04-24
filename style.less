@@ -1,8 +1,7 @@
 // variables
-#dimension() {
-  mobile-width: 375px;
-  desktop-width: 1440px;
-}
+@mobile-width: 375px;
+@tablet-width: 768px;
+@desktop-width: 1440px;
 
 #colors() {
   primary: hsl(171, 66%, 44%);
@@ -18,7 +17,7 @@
   font-size: 11px;
   text-align: center;
   position: fixed;
-  bottom: 0;
+  top: 0;
   right: 50%;
 }
 .attribution a {
@@ -63,6 +62,7 @@
   border: 0;
   &:hover {
     cursor: pointer;
+    opacity: 0.8;
   }
 }
 .title {
@@ -101,7 +101,7 @@
 
 // container
 body {
-  max-width: #dimension[desktop-width];
+  max-width: @desktop-width;
   margin: auto;
   font-size: 18px;
   .based-font();
@@ -215,5 +215,76 @@ body {
 #download {
   .section__description {
     max-width: 700px;
+  }
+}
+
+.footer {
+  background-color: #colors[light-gray];
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 150px;
+  .footer__logo {
+    img {
+      width: 60px;
+    }
+  }
+  .footer__link {
+    &:hover {
+      cursor: pointer;
+      color: #colors[primary];
+    }
+  }
+  .footer__navigation {
+    color: #colors[dark-gray];
+  }
+  @media (max-width: @mobile-width) {
+    .footer__navigation-mobile {
+      display: flex;
+      flex-direction: column;
+    }
+    .footer__navigation-desktop {
+      display: none;
+    }
+  }
+  @media (max-width: @tablet-width) {
+    .footer__navigation{
+    }
+    .footer__navigation-mobile {
+      display: none;
+    }
+    .footer__navigation-desktop {
+      flex-direction: column;
+    }
+    .footer__link {
+      margin-bottom: 20px;
+    }
+  }
+  @media (min-width: @tablet-width) {
+    .footer__navigation-mobile {
+      display: none;
+    }
+    .footer__navigation-desktop {
+      display: flex;
+      flex-direction: row;
+      gap: 100px;
+      margin: 0px 20px;
+      margin-right: 200px;
+    }
+    .footer__links-group {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  .footer__socialicons {
+    display: flex;
+    flex-direction: row;
+    height: 25px;
+    gap: 20px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
