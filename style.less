@@ -60,6 +60,9 @@
   padding: 15px 25px;
   border-radius: 30px;
   border: 0;
+  &:hover {
+    cursor: pointer;
+  }
 }
 .title {
   .text-darkgray();
@@ -137,7 +140,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
+  margin: 100px auto;
   .section__header {
     text-align: center;
     margin-bottom: 70px;
@@ -170,7 +173,40 @@ body {
 }
 
 #clipboard {
-  .section__description{
+  .section__description {
     max-width: 700px;
+  }
+}
+
+#workflow {
+  .horizontal__details {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 150px;
+    .section__detail {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        height: 30px;
+      }
+      .detail__title {
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+      .detail__description {
+        max-width: 400px;
+        text-align: center;
+      }
+    }
+  }
+  .companies {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      height: max-content;
+    }
   }
 }
