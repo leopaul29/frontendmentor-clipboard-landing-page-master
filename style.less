@@ -160,14 +160,10 @@ body {
 #snippets {
   .section__content {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     .section__doublegrid__right {
       .vertical__details {
         display: flex;
-        flex-direction: column;
         gap: 50px;
-        margin: 0px 100px;
         .section__detail {
           max-width: 380px;
           .detail__title {
@@ -176,12 +172,35 @@ body {
         }
       }
     }
+    @media (min-width: @tablet-width) {
+      flex-direction: column;
+      align-items: center;
+      .vertical__details {
+        flex-direction: row;
+        margin-top: 50px;
+        text-align: center;
+      }
+    }
+    @media (min-width: @desktop-width) {
+      flex-direction: row;
+      align-items: center;
+      .vertical__details {
+        flex-direction: column;
+        margin: 0px 100px;
+        text-align: left;
+      }
+    }
   }
 }
 
 #clipboard {
   .section__description {
     max-width: 700px;
+  }
+  .section__content {
+    img {
+      width: 100%;
+    }
   }
 }
 

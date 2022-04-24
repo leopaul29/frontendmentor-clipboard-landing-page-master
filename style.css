@@ -173,14 +173,10 @@ body {
 }
 #snippets .section__content {
   display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 #snippets .section__content .section__doublegrid__right .vertical__details {
   display: flex;
-  flex-direction: column;
   gap: 50px;
-  margin: 0px 100px;
 }
 #snippets .section__content .section__doublegrid__right .vertical__details .section__detail {
   max-width: 380px;
@@ -188,8 +184,33 @@ body {
 #snippets .section__content .section__doublegrid__right .vertical__details .section__detail .detail__title {
   margin-bottom: 12px;
 }
+@media (min-width: 768px) {
+  #snippets .section__content {
+    flex-direction: column;
+    align-items: center;
+  }
+  #snippets .section__content .vertical__details {
+    flex-direction: row;
+    margin-top: 50px;
+    text-align: center;
+  }
+}
+@media (min-width: 1440px) {
+  #snippets .section__content {
+    flex-direction: row;
+    align-items: center;
+  }
+  #snippets .section__content .vertical__details {
+    flex-direction: column;
+    margin: 0px 100px;
+    text-align: left;
+  }
+}
 #clipboard .section__description {
   max-width: 700px;
+}
+#clipboard .section__content img {
+  width: 100%;
 }
 #workflow .horizontal__details {
   display: flex;
