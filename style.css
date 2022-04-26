@@ -195,7 +195,7 @@ body {
 #snippets .vertical__details {
   display: flex;
   gap: 50px;
-  margin-left: 100px;
+  margin-left: 40px;
   text-align: left;
 }
 #snippets .vertical__details .section__detail {
@@ -273,7 +273,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 30px;
-  margin-bottom: 150px;
+  margin-bottom: 170px;
 }
 @media (max-width: 375px) {
   #workflow .horizontal__details {
