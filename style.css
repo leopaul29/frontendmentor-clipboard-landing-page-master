@@ -91,7 +91,7 @@
 .title-h3 {
   color: hsl(210, 10%, 33%);
   font-weight: 600;
-  font-size: 20px;
+  font-size: 22px;
 }
 .btn-primary {
   background-color: hsl(171, 66%, 44%);
@@ -186,10 +186,11 @@ body {
   margin-bottom: 10px;
 }
 #snippets {
-  margin-bottom: 170px;
+  margin-bottom: 160px;
 }
 #snippets .section__doublegrid__left img {
-  width: 100%;
+  width: 90%;
+  margin: auto auto;
 }
 #snippets .vertical__details {
   display: flex;
@@ -261,7 +262,7 @@ body {
   width: 100%;
 }
 #workflow {
-  margin-bottom: 150px;
+  margin-bottom: 140px;
 }
 @media (max-width: 375px) {
   #workflow .section__description {
@@ -338,7 +339,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 40px 150px;
-  margin-bottom: 30px;
 }
 @media (max-width: 375px) {
   .footer {
@@ -348,7 +348,7 @@ body {
   }
 }
 .footer .footer__logo img {
-  width: 55px;
+  width: 52px;
 }
 .footer .footer__link:hover {
   cursor: pointer;
